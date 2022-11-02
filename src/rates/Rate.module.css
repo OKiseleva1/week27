@@ -1,0 +1,25 @@
+.selected {
+    border: red 3px solid;
+    width: 300px;
+
+}
+
+.cardName {
+    background-color: rgb(220, 228, 243);
+
+}
+
+.cardPrice {
+    background-color: rgb(203, 211, 225);
+
+}
+
+.cardSpeed {
+    background-color: rgb(125, 128, 134);
+
+}
+
+.cardText {
+    background-color: rgb(83, 90, 103);
+
+}

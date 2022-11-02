@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import Rate from './rates/rate';
+
+const rates = [
+  { name: "Безлимитный 300", price: "300 руб/мес", speed: "до 10 Мбит/сек", text: "Объем включенного трафика не ограничен" },
+  { name: "Безлимитный 450", price: "450 руб/мес", speed: "до 50 Мбит/сек", text: "Объем включенного трафика не ограничен" },
+  { name: "Безлимитный 550", price: "550 руб/мес", speed: "до 100 Мбит/сек", text: "Объем включенного трафика не ограничен", isSelected: true },
+  { name: "Безлимитный 1000", price: "1000 руб/мес", speed: "до 200 Мбит/сек", text: "Объем включенного трафика не ограничен" }
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      {
+        rates.map((rate) =>
+          <Rate name={rate.name} price={rate.price} speed={rate.speed} text={rate.text} isSelected={rate.isSelected} />
+        )
+      }
     </div>
   );
 }
