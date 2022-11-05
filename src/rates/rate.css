@@ -1,7 +1,10 @@
+.rate {
+    border: none;
+}
+
 .selected {
     border: red 3px solid;
-    width: 300px;
-
+    width: 350px;
 }
 
 .cardName {
